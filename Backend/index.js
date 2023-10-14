@@ -10,7 +10,7 @@ const path =  require('path')
 const app = express();
 app.use(cors(
   {
-    origin: "http://localhost:3000",
+    origin: "https://employee-management-frontend-five.vercel.app",
     methods: ["POST", "GET", "PUT","DELETE"],
     credentials: true
   }

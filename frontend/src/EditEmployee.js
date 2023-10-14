@@ -13,7 +13,7 @@ function EditEmployee(){
   const navigate = useNavigate();
   const {id} = useParams();
   useEffect(()=>{
-    axios.get('http://localhost:8080/get/'+id)
+    axios.get('https://employee-management-backend-seven.vercel.app/'+id)
     .then(res => {
      if (res.data.status === 'success') {
       
@@ -30,7 +30,7 @@ function EditEmployee(){
 
   function handleSubmit(event){
     event.preventDefault();
-    axios.put('http://localhost:8080/update/'+id,data)
+    axios.put('https://employee-management-backend-seven.vercel.app/'+id,data)
     .then(res=>{
      if(res.data.status === 'success')
       navigate('/employee');

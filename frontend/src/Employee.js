@@ -8,7 +8,7 @@ function Employee (){
   const [data, setData] = useState([])
 
   useEffect(()=>{
-    axios.get('http://localhost:8080/getEmployees')
+    axios.get('https://employee-management-backend-seven.vercel.app/getEmployees')
     .then(res => {
       if(res.data.status==='success'){
         setData(res.data.result)
@@ -19,7 +19,7 @@ function Employee (){
 
   function handleDelete(id) {
     
-    axios.delete('http://localhost:8080/delete/'+id)
+    axios.delete('https://employee-management-backend-seven.vercel.app/'+id)
     .then(res=> {
 
       if(res.data.status === 'success'){
@@ -56,7 +56,7 @@ function Employee (){
           return <tr key={index}>
             <td>{employee.name}</td>
             <td>{
-              <img src={'http://localhost:8080/' + employee.image} alt="" className="employee_image" />
+              <img src={'https://employee-management-backend-seven.vercel.app/' + employee.image} alt="" className="employee_image" />
               }</td>
             <td>{employee.email}</td>
             <td>{employee.salary}</td>

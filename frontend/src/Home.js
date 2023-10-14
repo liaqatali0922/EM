@@ -10,17 +10,17 @@ function Home (){
   const [salary, setSalary] = useState()
 
   useEffect(() => {
-    axios.get('http://localhost:8080/adminCount')
+    axios.get('https://employee-management-backend-seven.vercel.app/adminCount')
 		.then(res => {
 			setAdminCount(res.data.admin)
 		}).catch(err => console.log(err));
 
-    axios.get('http://localhost:8080/employeeCount')
+    axios.get('https://employee-management-backend-seven.vercel.app/employeeCount')
 		.then(res => {
 			setEmployeeCount(res.data.employee)
 		}).catch(err => console.log(err));
 
-    axios.get('http://localhost:8080/salary')
+    axios.get('https://employee-management-backend-seven.vercel.app/salary')
 		.then(res => {
 			setSalary(res.data.sumOfSalary)
 		}).catch(err => console.log(err));

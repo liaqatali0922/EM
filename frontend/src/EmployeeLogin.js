@@ -16,7 +16,7 @@ function EmployeeLogin() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:8080/employeelogin', values)
+        axios.post('https://employee-management-backend-seven.vercel.app/employeelogin', values)
         .then(res => {
             if(res.data.status === 'success') {
                 const id = res.data.id;

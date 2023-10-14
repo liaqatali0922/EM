@@ -23,7 +23,7 @@ function AddEmployee(){
     formdata.append("salary",data.salary);
     formdata.append("address",data.address);
     formdata.append("image",data.image);
-    axios.post('http://localhost:8080/create',formdata)
+    axios.post('https://employee-management-backend-seven.vercel.app/create',formdata)
     .then(res=>{
       navigate('/employee');
     })

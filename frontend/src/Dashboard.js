@@ -10,7 +10,7 @@ function Dashboard() {
 	useEffect(()=>{
 		axios.get('https://employee-management-backend-seven.vercel.app/dashboard')
 		.then(res => {
-			if(res.data.Status === "success") {
+			if(res.data.status === "success") {
 				if(res.data.role === "admin") {
 					navigate('/');
 				} else {
